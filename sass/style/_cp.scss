@@ -368,10 +368,9 @@ h2.title {
 }
 
 .viewCount {
-  width: 100%;
   font-size: 0.8rem;
-  text-align: right;
   padding-top: 10px;
+  margin: 0 auto 0 0;
 }
 .tableBlock {
   .tableTitle {
@@ -821,6 +820,10 @@ h2.title {
   }
 }
 .publications_cp {
+  .function_panel {
+    position: absolute;
+    right: 50px;
+  }
   .downloadBtnBlock {
     display: flex;
     a {
@@ -855,7 +858,6 @@ h2.title {
       margin: 0 0 0px 0;
       list-style: none;
       display: flex;
-      justify-content: flex-end;
       li {
         color: #969696;
         font-size: 14px;

@@ -34,6 +34,7 @@
     time {
       font-family: georgia;
       font-size: 1.125em;
+      margin-right: 10px;
       @include screen('mobile') {
         font-size: 0.938em;
       }
