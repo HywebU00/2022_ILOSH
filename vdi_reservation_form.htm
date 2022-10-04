@@ -109,5 +109,13 @@
         </div>
       </div>
     </div>
+    <script>
+      (function () {
+        var unSelect = document.querySelectorAll('.full label,.close label');
+        unSelect.forEach(function (i) {
+          i.setAttribute('for', '');
+        });
+      })();
+    </script>
   </body>
 </html>

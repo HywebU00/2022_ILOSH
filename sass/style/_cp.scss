@@ -1188,7 +1188,7 @@ h2.title {
           &:hover {
             color: #fff;
             padding-right: 50px;
-            @include screen('xs_mobile') {
+            @include screen('tablet') {
               padding-right: 15px;
             }
             &:before {

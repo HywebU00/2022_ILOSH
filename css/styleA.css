@@ -11495,7 +11495,7 @@ body.large_size .innerpage {
 }
 @media screen and (max-width: 991px) {
   .innerBanner {
-    margin-bottom: -180px;
+    margin-bottom: -50px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -11512,9 +11512,14 @@ body.large_size .innerpage {
   left: 50%;
   transform: translateX(-50%);
 }
+@media screen and (max-width: 991px) {
+  .innerBanner img {
+    height: 250px;
+  }
+}
 @media screen and (max-width: 767px) {
   .innerBanner img {
-    height: 130px;
+    height: 150px;
   }
 }
 .innerBanner h2.pageTitle {
@@ -11527,6 +11532,7 @@ body.large_size .innerpage {
   text-align: center;
   left: 0;
   top: 50%;
+  transform: translateY(-50%);
   margin: 0;
   line-height: 1;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
@@ -13579,7 +13585,7 @@ h2.title {
   color: #fff;
   padding-right: 50px;
 }
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 991px) {
   .vdi .selectBox ul li a:focus, .vdi .selectBox ul li a.active, .vdi .selectBox ul li a:hover {
     padding-right: 15px;
   }

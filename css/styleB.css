@@ -13704,7 +13704,7 @@ h2.title {
   color: #fff;
   padding-right: 50px;
 }
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 991px) {
   .vdi .selectBox ul li a:focus, .vdi .selectBox ul li a.active, .vdi .selectBox ul li a:hover {
     padding-right: 15px;
   }
