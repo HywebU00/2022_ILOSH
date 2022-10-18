@@ -4465,10 +4465,10 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
+  padding: 0 0 1.5em;
 }
 .menu > ul > li {
-  flex: 0 1 17%;
-  padding: 0 0 1.5em;
+  flex: 0 1 157px;
 }
 .menu > ul > li > a {
   display: block;
@@ -4507,6 +4507,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   display: block;
   outline: none;
   text-decoration: none;
+  text-align: center;
 }
 .menu ul li ul {
   display: none;
@@ -9260,6 +9261,9 @@ div.function ul li {
   margin: 0 0px 0px 3px;
   flex: 0 0 auto;
 }
+div.function ul li.active a {
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5), -4px -4px 6px 0 rgba(116, 125, 136, 0.5), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.4);
+}
 div.function ul li button,
 div.function ul li a {
   font-size: 0.813em;
@@ -10661,6 +10665,10 @@ body.large_size .innerpage {
   background: #ab274a;
 }
 
+.sidebar .menu > ul > li:hover > a {
+  color: #fff !important;
+}
+
 .colorStyleA {
   /* focus 過去的點變色 */
   /* 點 active 的樣子 */
@@ -10727,14 +10735,17 @@ body.large_size .innerpage {
   box-shadow: 0 0px 0px 2px #d2884c inset;
 }
 
-.colorStyleA div.function ul li button:hover, .colorStyleA div.function ul li button:focus,
-.colorStyleA div.function ul li a:hover,
-.colorStyleA div.function ul li a:focus {
+.colorStyleA .function_panel .function ul li.active a {
   background: #049061;
   border-color: #049061;
+  color: #fff;
+}
+.colorStyleA .function_panel .function ul li.active a:before {
+  filter: invert(100%);
 }
 .colorStyleA .function_panel .function ul li a:hover, .colorStyleA .function_panel .function ul li a:focus {
   background: #049061;
+  border-color: #049061;
   color: #fff;
 }
 .colorStyleA .function_panel .function ul li a:hover:before, .colorStyleA .function_panel .function ul li a:focus:before {
@@ -10744,14 +10755,17 @@ body.large_size .innerpage {
   background: #049061;
 }
 
-.colorStyleB div.function ul li button:hover, .colorStyleB div.function ul li button:focus,
-.colorStyleB div.function ul li a:hover,
-.colorStyleB div.function ul li a:focus {
+.colorStyleB .function_panel .function ul li.active a {
   background: #ab274a;
   border-color: #ab274a;
+  color: #fff;
+}
+.colorStyleB .function_panel .function ul li.active a:before {
+  filter: invert(100%);
 }
 .colorStyleB .function_panel .function ul li a:hover, .colorStyleB .function_panel .function ul li a:focus {
   background: #ab274a;
+  border-color: #ab274a;
   color: #fff;
 }
 .colorStyleB .function_panel .function ul li a:hover:before, .colorStyleB .function_panel .function ul li a:focus:before {
@@ -11611,15 +11625,15 @@ body {
     margin-bottom: -45px;
   }
   .menu ul {
+    max-width: 1100px;
     margin: 0 auto;
-    max-width: 970px;
+    padding: 25px 0;
+    overflow-x: auto;
   }
   .menu ul li {
-    flex-grow: 1;
     padding-bottom: 0;
   }
   .menu ul li a {
-    padding: 25px 0;
     color: #fff;
     text-align: center;
     text-shadow: 0 0 0px rgb(0, 0, 0);
@@ -11658,6 +11672,9 @@ body {
 }
 .menuFix .menu {
   margin-bottom: -26px;
+}
+.menuFix .menu > ul {
+  padding: 0;
 }
 .menuFix .menu a {
   padding: 6px 0;
@@ -12295,7 +12312,6 @@ body {
   content: "";
   width: 38px;
   height: 19px;
-  background: url("../images/index/styleB_news_arrow.png") no-repeat;
   position: absolute;
   left: calc(100% + 10px);
   bottom: 0;

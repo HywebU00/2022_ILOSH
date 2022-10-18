@@ -166,6 +166,9 @@
   }
 }
 
+.sidebar .menu > ul > li:hover > a {
+  color: #fff !important;
+}
 //_slick/////////////////////////////////////////////
 @each $item in $colorStyle {
   #{$item} {
@@ -262,38 +265,35 @@
 //_function_panel/////////////////////////////////////////////
 @each $item in $colorStyle {
   #{$item} {
-    div.function {
-      ul {
-        li {
-          button,
-          a {
-            &:hover,
-            &:focus {
-              @if $item == nth($colorStyle, 1) {
-                background: darken(nth($aTagHover, 1), 0);
-                border-color: darken(nth($aTagHover, 1), 0);
-              } @else {
-                background: darken(nth($aTagHover, 2), 0);
-                border-color: darken(nth($aTagHover, 2), 0);
-              }
-            }
-          }
-        }
-      }
-    }
-
     // 放進function_panel樣式
     .function_panel {
       .function {
         ul {
           li {
+            &.active {
+              a {
+                @if $item == nth($colorStyle, 1) {
+                  background: darken(nth($aTagHover, 1), 0);
+                  border-color: darken(nth($aTagHover, 1), 0);
+                } @else {
+                  background: darken(nth($aTagHover, 2), 0);
+                  border-color: darken(nth($aTagHover, 2), 0);
+                }
+                color: #fff;
+                &:before {
+                  filter: invert(100%);
+                }
+              }
+            }
             a {
               &:hover,
               &:focus {
                 @if $item == nth($colorStyle, 1) {
                   background: darken(nth($aTagHover, 1), 0);
+                  border-color: darken(nth($aTagHover, 1), 0);
                 } @else {
                   background: darken(nth($aTagHover, 2), 0);
+                  border-color: darken(nth($aTagHover, 2), 0);
                 }
                 color: #fff;
                 &:before {

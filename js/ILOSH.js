@@ -1,74 +1,4 @@
 $(function () {
-  // 切換版型;
-
-  $('.main').append(
-    '<div class="colorMenu"><div class="item itemA"><span>預約系統</span><ul><li class="stAcA">ColorA</li><li class="stAcB">ColorB</li></ul></div><div class="item itemB"><span>採購網</span><ul><li class="stBcA">ColorA</li><li class="stBcB">ColorB</li></ul></div><div class="item itemC"><span>成果網</span><ul><li class="stCcA">ColorA</li><li class="stCcB">ColorB</li></ul></div></a>'
-  );
-
-  document.querySelector('.itemA').addEventListener('click', function () {
-    document.querySelector('body').classList.add('colorStyleA');
-    document.querySelector('body').classList.remove('colorStyleB');
-    document.querySelector('#changeStyle').setAttribute('href', 'css/styleA.css');
-    document.querySelector('header h1 span').textContent = '虛擬環境VDI預約系統';
-    console.log('a');
-  });
-  document.querySelector('.itemA .stAcA').addEventListener('click', function (e) {
-    e.stopPropagation();
-    document.querySelector('body').classList.add('colorStyleA');
-    document.querySelector('body').classList.remove('colorStyleB');
-    document.querySelector('#changeStyle').setAttribute('href', 'css/styleA.css');
-    document.querySelector('header h1 span').textContent = '虛擬環境VDI預約系統';
-  });
-  document.querySelector('.itemA .stAcB').addEventListener('click', function (e) {
-    e.stopPropagation();
-    document.querySelector('body').classList.add('colorStyleB');
-    document.querySelector('body').classList.remove('colorStyleA');
-    document.querySelector('#changeStyle').setAttribute('href', 'css/styleA.css');
-    document.querySelector('header h1 span').textContent = '虛擬環境VDI預約系統';
-  });
-
-  document.querySelector('.itemB').addEventListener('click', function () {
-    document.querySelector('body').classList.add('colorStyleA');
-    document.querySelector('body').classList.remove('colorStyleB');
-    document.querySelector('#changeStyle').setAttribute('href', 'css/styleB.css');
-    document.querySelector('header h1 span').textContent = '科研採購網';
-  });
-  document.querySelector('.itemB .stBcA').addEventListener('click', function (e) {
-    e.stopPropagation();
-    document.querySelector('body').classList.add('colorStyleA');
-    document.querySelector('body').classList.remove('colorStyleB');
-    document.querySelector('#changeStyle').setAttribute('href', 'css/styleB.css');
-    document.querySelector('header h1 span').textContent = '科研採購網';
-  });
-  document.querySelector('.itemB .stBcB').addEventListener('click', function (e) {
-    e.stopPropagation();
-    document.querySelector('body').classList.add('colorStyleB');
-    document.querySelector('body').classList.remove('colorStyleA');
-    document.querySelector('#changeStyle').setAttribute('href', 'css/styleB.css');
-    document.querySelector('header h1 span').textContent = '科研採購網';
-  });
-
-  document.querySelector('.itemC').addEventListener('click', function () {
-    document.querySelector('body').classList.add('colorStyleA');
-    document.querySelector('body').classList.remove('colorStyleB');
-    document.querySelector('#changeStyle').setAttribute('href', 'css/styleC.css');
-    document.querySelector('header h1 span').textContent = '研究成果主題網';
-  });
-  document.querySelector('.itemC .stCcA').addEventListener('click', function (e) {
-    e.stopPropagation();
-    document.querySelector('body').classList.add('colorStyleA');
-    document.querySelector('body').classList.remove('colorStyleB');
-    document.querySelector('#changeStyle').setAttribute('href', 'css/styleC.css');
-    document.querySelector('header h1 span').textContent = '研究成果主題網';
-  });
-  document.querySelector('.itemC .stCcB').addEventListener('click', function (e) {
-    e.stopPropagation();
-    document.querySelector('body').classList.add('colorStyleB');
-    document.querySelector('body').classList.remove('colorStyleA');
-    document.querySelector('#changeStyle').setAttribute('href', 'css/styleC.css');
-    document.querySelector('header h1 span').textContent = '研究成果主題網';
-  });
-
   // 切換PC/Mobile 選單
   var switchMainMenu = true; //true顯示漢堡選單，false隱藏漢堡選單
   var switchDefaultMenu = true; //true顯示預設選單，false隱藏預設選單
@@ -76,9 +6,6 @@ $(function () {
 
   //此為方便前台觀看版型變化用，實際請更改上方的參數
   if (menuSwitch) {
-    $('body').append(
-      '<div class="controlMenu"><div class="item"><span>側邊選單</span><div class="switch-box"><input type="checkbox" name="switch" id="switch1" checked /><label class="switch" for="switch1"><div class="box"><span class="off"></span><span class="on"></span></div></label></div></div><div class="item"><span>預設選單</span><div class="switch-box"><input type="checkbox" name="switch2" id="switch2" checked/><label class="switch" for="switch2"><div class="box"><span class="off"></span><span class="on"></span></div></label></div></div></div>'
-    );
     $('.menu').addClass('active');
   }
 
@@ -132,6 +59,7 @@ $(function () {
   _body.prepend('<aside class="sidebar"><div class="m_area"><button type="button" class="sidebarClose">關閉</button></div><div class="menu_overlay"></div></aside>');
   $('header .container').prepend('<button type="button" class="searchCtrl">查詢</button>');
   $('.secNavList').append('<button type="button" class="sidebarCtrl">側欄選單</button>');
+
   var menu_status = false,
     _sidebar = $('.sidebar'),
     _search = $('.search'),
@@ -330,12 +258,17 @@ $(function () {
   }
   function pcUse() {
     if (switchDefaultMenu) {
-      _body.removeClass('noscroll');
-      _body.addClass('pcMenuUse');
-      _body.removeClass('mobileMenuUse');
-      $('.header .menu').addClass('active');
-      $('.m_search').hide();
-      $('.language').find('ul').hide();
+      if (ww > wwSmall) {
+        _body.removeClass('noscroll');
+        _body.addClass('pcMenuUse');
+        _body.removeClass('mobileMenuUse');
+        $('.header .menu').addClass('active');
+        $('.m_search').hide();
+        $('.language').find('ul').hide();
+      } else {
+        $('.header .menu').removeClass('active');
+        _body.removeClass('pcMenuUse');
+      }
     } else {
       $('.header .menu').removeClass('active');
       _body.removeClass('pcMenuUse');
@@ -350,8 +283,8 @@ $(function () {
         $(this).children('ul').stop(true, false).fadeIn();
       },
       mouseleave: function () {
-        $(this).parent().siblings('ul').hide();
-        $(this).children('ul').stop(true, false).fadeOut();
+        $(this).parent().siblings('ul').hide('fast');
+        $(this).children('ul').stop(true, false).fadeOut('fast');
       },
     });
     liHasChild.off('click');
@@ -405,24 +338,20 @@ $(function () {
 
     if (ww < wwSmall) {
       mobileUse();
+      pcUse();
       $('.header .menu').removeClass('active');
     } else {
-      // if (!menuSwitch) {
-      //   switchDefaultMenu = true;
-      //   pcUse();
-      // } else {
       mobileUse();
       pcUse();
-      // }
     }
   }
   //行動版/電腦版切換
   var resizeTimer;
   _window.on('resize', function (event) {
-    hideSidebar();
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(function () {
       // search_mode = true;
+      hideSidebar();
       $('.m_search').hide();
       menuCheck();
     }, 50);
@@ -780,8 +709,9 @@ $(function () {
     .click(function (e) {
       $(this).parent('li').siblings('li').find('a').removeClass('active');
       $('body').removeClass('large_size').addClass('small_size');
-      $(this).blur().addClass('active');
+      $(this).addClass('active');
       e.preventDefault();
+      console.log('a');
       createCookie('FontSize', 'small', 356);
     });
   $('.font_size')
@@ -789,7 +719,7 @@ $(function () {
     .click(function (e) {
       $(this).parent('li').siblings('li').find('a').removeClass('active');
       $('body').removeClass('large_size small_size');
-      $(this).blur().addClass('active');
+      $(this).addClass('active');
       e.preventDefault();
       createCookie('FontSize', 'medium', 356);
     });
@@ -798,7 +728,7 @@ $(function () {
     .click(function (e) {
       $(this).parent('li').siblings('li').find('a').removeClass('active');
       $('body').removeClass('small_size').addClass('large_size');
-      $(this).blur().addClass('active');
+      $(this).addClass('active');
       e.preventDefault();
       createCookie('FontSize', 'large', 356);
     });
@@ -831,21 +761,17 @@ $(function () {
       $('body').removeClass('large_size medium_size').addClass('small_size');
       $('.font_size').find('.small').addClass('active');
       e.preventDefault();
+    } else if (cookie == 'large') {
+      $('.font_size').find('.large').parent('li').siblings('li').find('a').removeClass('active');
+      $('body').removeClass('small_size medium_size').addClass('large_size');
+      $('.font_size').find('.large').addClass('active');
+      e.preventDefault();
     } else {
-      if (cookie == 'large') {
-        //$('.font_size').find('.large').click();
-        $('.font_size').find('.large').parent('li').siblings('li').find('a').removeClass('active');
-        $('body').removeClass('small_size medium_size').addClass('large_size');
-        $('.font_size').find('.large').addClass('active');
-        e.preventDefault();
-      } else {
-        //這裡是預設宣告
-        //$('.font_size').find('.medium').click();
-        $('.font_size').find('.medium').parent('li').siblings('li').find('a').removeClass('active');
-        $('body').removeClass('large_size small_size');
-        $('.font_size').find('.medium').addClass('active');
-        e.preventDefault();
-      }
+      $('.font_size').find('.medium').click();
+      $('.font_size').find('.medium').parent('li').siblings('li').find('a').removeClass('active');
+      $('body').removeClass('large_size small_size');
+      $('.font_size').find('.medium').addClass('active');
+      e.preventDefault();
     }
   };
   /*-----------------------------------*/
