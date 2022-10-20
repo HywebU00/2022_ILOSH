@@ -49,13 +49,11 @@ $(function () {
   //切換列表或是區塊
   $('.switchBlock li:first').on('click', function () {
     $('.lp .list ul').removeClass('gridList');
-    $('.lp .list > ul .typeLise').addClass('active');
-    $('.lp .list > ul .typeGrid').removeClass('active');
+    $('.typeGrid').removeClass('active');
   });
   $('.switchBlock li:last').on('click', function () {
     $('.lp .list > ul').addClass('gridList');
-    $('.lp .list > ul .typeGrid').addClass('active');
-    $('.lp .list > ul .typeLise').removeClass('active');
+    $('.typeGrid').addClass('active');
   });
   //字型大小切換
   $('.font_size > a').on('click', function () {
