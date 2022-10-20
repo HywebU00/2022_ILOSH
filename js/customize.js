@@ -49,11 +49,13 @@ $(function () {
   //切換列表或是區塊
   $('.switchBlock li:first').on('click', function () {
     $('.lp .list ul').removeClass('gridList');
+    $('.typeList').addClass('active');
     $('.typeGrid').removeClass('active');
   });
   $('.switchBlock li:last').on('click', function () {
     $('.lp .list > ul').addClass('gridList');
     $('.typeGrid').addClass('active');
+    $('.typeList').removeClass('active');
   });
   //字型大小切換
   $('.font_size > a').on('click', function () {

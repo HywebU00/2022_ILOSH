@@ -12838,7 +12838,7 @@ h2.title {
   left: 50% !important;
   transform: translateX(-50%);
 }
-.function.switchBlock .switch .typeLise a::before {
+.function.switchBlock .switch .typeList a::before {
   background: url(../images/list.svg) no-repeat center center;
   background-size: 100%;
 }
