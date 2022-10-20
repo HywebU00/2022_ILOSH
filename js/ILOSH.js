@@ -1,34 +1,35 @@
 $(function () {
   // 切換PC/Mobile 選單
-  var switchMainMenu = true; //true顯示漢堡選單，false隱藏漢堡選單
-  var switchDefaultMenu = true; //true顯示預設選單，false隱藏預設選單
-  var menuSwitch = true; //開啟選單切換功能
+  // var switchMainMenu = true; //true顯示漢堡選單，false隱藏漢堡選單
+  // var switchDefaultMenu = true; //true顯示預設選單，false隱藏預設選單
+  // var menuSwitch = true; //開啟選單切換功能
 
   //此為方便前台觀看版型變化用，實際請更改上方的參數
-  if (menuSwitch) {
-    $('.menu').addClass('active');
-  }
+  // if (menuSwitch) {
+  //   $('.menu').addClass('active');
+  // }
 
-  $('.controlMenu').on('click', '#switch1', function () {
-    if ($(this).prop('checked')) {
-      switchMainMenu = true;
-      menuCheck();
-    } else {
-      switchMainMenu = false;
-      menuCheck();
-    }
-  });
-  $('.controlMenu').on('click', '#switch2', function () {
-    if ($(this).prop('checked')) {
-      switchDefaultMenu = true;
-      menuCheck();
-    } else {
-      switchDefaultMenu = false;
-      menuCheck();
-    }
-  });
+  // $('.controlMenu').on('click', '#switch1', function () {
+  //   if ($(this).prop('checked')) {
+  //     switchMainMenu = true;
+  //     menuCheck();
+  //   } else {
+  //     switchMainMenu = false;
+  //     menuCheck();
+  //   }
+  // });
+  // $('.controlMenu').on('click', '#switch2', function () {
+  //   if ($(this).prop('checked')) {
+  //     switchDefaultMenu = true;
+  //     menuCheck();
+  //   } else {
+  //     switchDefaultMenu = false;
+  //     menuCheck();
+  //   }
+  // });
 
   document.createElement('picture');
+  let checkMenu = document.querySelector('body').classList.contains('pcMenuUse');
   /*-----------------------------------*/
   ///////////////// 變數 ////////////////
   /*-----------------------------------*/
@@ -164,12 +165,12 @@ $(function () {
 
   function mobileUse() {
     ww = _window.outerWidth();
-    if (switchMainMenu || ww < wwSmall) {
-      $('.sidebarCtrl').addClass('active');
-      _body.addClass('mobileMenuUse');
-    } else {
-      $('.sidebarCtrl').removeClass('active');
-      _body.removeClass('mobileMenuUse');
+    if (ww < wwSmall) {
+      _body.addClass('onMobile');
+      _body.removeClass('pcMenuUse');
+    } else if (checkMenu) {
+      _body.addClass('pcMenuUse');
+      _body.removeClass('onMobile');
     }
     /*-----------------------------------*/
     /////////////// 手機版設定 /////////////
@@ -257,21 +258,10 @@ $(function () {
     $('.language').find('ul').hide();
   }
   function pcUse() {
-    if (switchDefaultMenu) {
-      if (ww > wwSmall) {
-        _body.removeClass('noscroll');
-        _body.addClass('pcMenuUse');
-        _body.removeClass('mobileMenuUse');
-        $('.header .menu').addClass('active');
-        $('.m_search').hide();
-        $('.language').find('ul').hide();
-      } else {
-        $('.header .menu').removeClass('active');
-        _body.removeClass('pcMenuUse');
-      }
-    } else {
-      $('.header .menu').removeClass('active');
-      _body.removeClass('pcMenuUse');
+    if (ww > wwSmall) {
+      _body.removeClass('noscroll');
+      // $('.m_search').hide();
+      // $('.language').find('ul').hide();
     }
     /*-----------------------------------*/
     /////////////// PC版設定 /////////////
@@ -339,7 +329,6 @@ $(function () {
     if (ww < wwSmall) {
       mobileUse();
       pcUse();
-      $('.header .menu').removeClass('active');
     } else {
       mobileUse();
       pcUse();
@@ -397,13 +386,11 @@ $(function () {
 
     function stickynavBar() {
       windowW = _window.outerWidth();
-      if (switchDefaultMenu == true) {
-        if (windowW >= wwSmall && _window.scrollTop() > stickyMenuTop) {
-          $('body').addClass('sticky');
-        } else {
-          $('body').removeClass('sticky');
-          $('.main').removeAttr('style');
-        }
+      if (windowW >= wwSmall && _window.scrollTop() > stickyMenuTop) {
+        $('body').addClass('sticky');
+      } else {
+        $('body').removeClass('sticky');
+        $('.main').removeAttr('style');
       }
     }
     _window.on('scroll', function (event) {

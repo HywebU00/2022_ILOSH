@@ -3923,9 +3923,6 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   position: relative;
   display: none;
 }
-.header > .container .sidebarCtrl.active {
-  display: block;
-}
 .header > .container .sidebarCtrl span {
   width: 28px;
   position: absolute;
@@ -4398,6 +4395,14 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   color: #159ba0;
 }
 
+.mobileMenuUse .header > .container .sidebarCtrl {
+  display: block;
+}
+
+.onMobile .sidebarCtrl {
+  display: block !important;
+}
+
 @-webkit-keyframes showMenu {
   0% {
     left: 50%;
@@ -4427,9 +4432,6 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   flex-basis: 100%;
   display: none;
   transition: all 0.3s linear;
-}
-.menu.active {
-  display: block;
 }
 .menu.sticky {
   position: fixed;
@@ -4564,6 +4566,10 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   -webkit-animation: none;
           animation: none;
   font-size: 1em;
+}
+
+.pcMenuUse .menu {
+  display: block !important;
 }
 
 .sidebar {
@@ -11603,8 +11609,21 @@ body.large_size .innerpage {
 .header {
   background: #e1e8ef;
 }
+@media screen and (max-width: 767px) {
+  .header > .container .sidebarCtrl {
+    margin-left: 0 !important;
+  }
+}
+.header > .container .sidebarCtrl::before {
+  display: none;
+}
 .header .navigation:before {
   width: 100px;
+}
+@media screen and (max-width: 767px) {
+  .header .navigation:before {
+    width: 70px;
+  }
 }
 .header .navigation .secNavList .font_size > a {
   display: none;
@@ -11635,12 +11654,6 @@ body.large_size .innerpage {
   content: "A +";
 }
 .header .navigation .secNavList .loginBtn {
-  display: none;
-}
-.header > .container .sidebarCtrl.active {
-  margin-right: 15px;
-}
-.header > .container .sidebarCtrl::before {
   display: none;
 }
 
@@ -11800,6 +11813,10 @@ footer {
 }
 .colorStyleB .header .navigation .secNavList .font_size ul li a.active, .colorStyleB .header .navigation .secNavList .font_size ul li a:hover, .colorStyleB .header .navigation .secNavList .font_size ul li a:focus {
   background: #77170e;
+}
+
+.mobileMenuUse .header > .container .sidebarCtrl {
+  margin-right: 15px;
 }
 
 .mpBanner .container {

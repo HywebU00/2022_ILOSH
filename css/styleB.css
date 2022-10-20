@@ -3923,9 +3923,6 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   position: relative;
   display: none;
 }
-.header > .container .sidebarCtrl.active {
-  display: block;
-}
 .header > .container .sidebarCtrl span {
   width: 28px;
   position: absolute;
@@ -4398,6 +4395,14 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   color: #00a556;
 }
 
+.mobileMenuUse .header > .container .sidebarCtrl {
+  display: block;
+}
+
+.onMobile .sidebarCtrl {
+  display: block !important;
+}
+
 @-webkit-keyframes showMenu {
   0% {
     left: 50%;
@@ -4427,9 +4432,6 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   flex-basis: 100%;
   display: none;
   transition: all 0.3s linear;
-}
-.menu.active {
-  display: block;
 }
 .menu.sticky {
   position: fixed;
@@ -4564,6 +4566,10 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   -webkit-animation: none;
           animation: none;
   font-size: 1em;
+}
+
+.pcMenuUse .menu {
+  display: block !important;
 }
 
 .sidebar {
@@ -11490,8 +11496,10 @@ body {
 .header:before {
   box-shadow: none;
 }
-.header > .container .sidebarCtrl.active {
-  margin-right: 15px;
+@media screen and (max-width: 767px) {
+  .header > .container .sidebarCtrl {
+    margin-left: 0 !important;
+  }
 }
 .header > .container .sidebarCtrl::before {
   display: none;
@@ -11501,6 +11509,11 @@ body {
 }
 .header .navigation:before {
   width: 100px;
+}
+@media screen and (max-width: 767px) {
+  .header .navigation:before {
+    width: 70px;
+  }
 }
 .header .navigation .secNavList .font_size > a {
   display: none;
@@ -11632,6 +11645,7 @@ body {
   }
   .menu ul li {
     padding-bottom: 0;
+    flex: 0 1 auto;
   }
   .menu ul li a {
     color: #fff;
@@ -11730,6 +11744,10 @@ a:focus {
   background: #ab274a;
   background: linear-gradient(to right, #d2884c 0%, #ab274a 50%, #ab274a 100%);
 }
+.mobileMenuUse .sidebarCtrl {
+  margin-right: 0px;
+}
+
 footer {
   overflow: hidden;
   box-sizing: border-box;

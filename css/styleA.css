@@ -3923,9 +3923,6 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   position: relative;
   display: none;
 }
-.header > .container .sidebarCtrl.active {
-  display: block;
-}
 .header > .container .sidebarCtrl span {
   width: 28px;
   position: absolute;
@@ -4398,6 +4395,14 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   color: #4a62cf;
 }
 
+.mobileMenuUse .header > .container .sidebarCtrl {
+  display: block;
+}
+
+.onMobile .sidebarCtrl {
+  display: block !important;
+}
+
 @-webkit-keyframes showMenu {
   0% {
     left: 50%;
@@ -4427,9 +4432,6 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   flex-basis: 100%;
   display: none;
   transition: all 0.3s linear;
-}
-.menu.active {
-  display: block;
 }
 .menu.sticky {
   position: fixed;
@@ -4564,6 +4566,10 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   -webkit-animation: none;
           animation: none;
   font-size: 1em;
+}
+
+.pcMenuUse .menu {
+  display: block !important;
 }
 
 .sidebar {

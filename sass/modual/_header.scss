@@ -71,9 +71,7 @@
       position: relative;
       display: none;
       @extend %mobileCtrlBtn;
-      &.active {
-        display: block;
-      }
+
       span {
         width: 28px;
         position: absolute;
@@ -525,3 +523,15 @@
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.mobileMenuUse .header > .container {
+  .sidebarCtrl {
+    display: block;
+  }
+}
+
+.onMobile {
+  .sidebarCtrl {
+    display: block !important;
+  }
+}

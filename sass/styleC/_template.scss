@@ -112,11 +112,25 @@
     background: none;
   }
 }
+
 .header {
   background: #e1e8ef;
+  > .container {
+    .sidebarCtrl {
+      @include screen('mobile') {
+        margin-left: 0 !important;
+      }
+      &::before {
+        display: none;
+      }
+    }
+  }
   .navigation {
     &:before {
       width: 100px;
+      @include screen('mobile') {
+        width: 70px;
+      }
     }
     .secNavList {
       .font_size {
@@ -160,16 +174,6 @@
         }
       }
       .loginBtn {
-        display: none;
-      }
-    }
-  }
-  > .container {
-    .sidebarCtrl {
-      &.active {
-        margin-right: 15px;
-      }
-      &::before {
         display: none;
       }
     }
@@ -330,5 +334,11 @@ footer {
       }
     }
     //end//
+  }
+}
+
+.mobileMenuUse .header > .container {
+  .sidebarCtrl {
+    margin-right: 15px;
   }
 }
