@@ -11690,6 +11690,9 @@ body {
 .menuFix .menu > ul {
   padding: 0;
 }
+.menuFix .menu > ul > li {
+  padding: 0 10px;
+}
 .menuFix .menu a {
   padding: 6px 0;
 }

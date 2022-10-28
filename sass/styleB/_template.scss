@@ -219,6 +219,9 @@ body {
     margin-bottom: -26px;
     & > ul {
       padding: 0;
+      & > li {
+        padding: 0 10px;
+      }
     }
     a {
       padding: 6px 0;
