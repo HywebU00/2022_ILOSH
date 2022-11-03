@@ -9,7 +9,7 @@ function alertBox() {
   });
 }
 $(function () {
-  $('body').addClass('colorStyleA');
+  // $('body').addClass('colorStyleA');
 
   //開始預約表格，增加時間抓取
   let firstTime = $('.weekBox table tr').find('.time:first span').html();

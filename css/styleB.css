@@ -11671,11 +11671,11 @@ body {
 }
 .main::before {
   content: "";
-  height: 500px;
+  min-height: 50%;
   left: 0;
   right: 0;
   position: absolute;
-  bottom: -50px;
+  top: 0;
   background: linear-gradient(to bottom, rgb(245, 247, 249) 0%, rgb(245, 247, 249) 70%, rgba(245, 247, 249, 0) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#00ebedef", endColorstr="#ebedef",GradientType=0 );
 }
