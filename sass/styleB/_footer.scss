@@ -157,8 +157,8 @@ footer {
   }
   ul {
     display: flex;
-    justify-content: space-between;
     padding: 0;
+    justify-content: flex-start;
     li {
       list-style: none;
       a {

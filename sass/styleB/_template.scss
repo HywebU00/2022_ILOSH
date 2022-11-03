@@ -135,13 +135,14 @@ body {
 }
 @include screen('mobileMin') {
   .pcMenuUse .header .container:nth-child(2) {
+    margin-bottom: -45px;
     position: relative;
     &::before {
       content: '';
       position: absolute;
       top: 0;
       right: 15px;
-      bottom: -45px;
+      bottom: 0px;
       left: 15px;
       display: block;
       border-radius: 50px;
@@ -162,12 +163,11 @@ body {
   }
 
   .menu {
-    margin-bottom: -45px;
+    // margin-bottom: -45px;
     ul {
       max-width: 1100px;
       margin: 0 auto;
       padding: 25px 0;
-      overflow-x: auto;
       li {
         padding-bottom: 0;
         flex: 0 1 auto;
@@ -206,7 +206,7 @@ body {
 }
 .menuFix {
   .wrapper {
-    padding-top: 115px;
+    padding-top: 135px;
   }
   .header {
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
@@ -226,6 +226,9 @@ body {
     a {
       padding: 6px 0;
     }
+  }
+  &.pcMenuUse .header .container:nth-child(2) {
+    margin-bottom: 0px;
   }
 }
 
@@ -318,5 +321,10 @@ a:focus {
 .mobileMenuUse {
   .sidebarCtrl {
     margin-right: 0px;
+  }
+}
+.footerMenu nav > ul {
+  & > li {
+    margin: 0 15px;
   }
 }

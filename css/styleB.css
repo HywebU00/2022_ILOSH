@@ -5459,6 +5459,7 @@ footer .footerLogo {
   flex: 0 1 auto;
 }
 footer .footerInfo {
+  width: 45%;
   padding-right: 20px;
   display: flex;
   flex-direction: column;
@@ -5568,6 +5569,7 @@ footer .footerIcon a:focus:after {
 }
 
 .footerMenu {
+  width: 54%;
   position: relative;
   margin: 0 0 0 auto;
 }
@@ -5579,15 +5581,21 @@ footer .footerIcon a:focus:after {
 .footerMenu nav {
   margin-bottom: 10%;
 }
+.footerMenu nav > ul > li {
+  width: calc(25% - 20px);
+  margin: 0 0 20px 20px !important;
+}
 .footerMenu ul {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
   padding: 0;
 }
 .footerMenu ul li {
   list-style: none;
 }
 .footerMenu ul li + li {
-  margin-left: 30px;
+  margin: 0 0 20px 30px;
 }
 .footerMenu ul li a {
   color: #fff;
@@ -5607,7 +5615,8 @@ footer .footerIcon a:focus:after {
   margin: 0 0 10px 0;
 }
 .footerMenu ul li ul li a {
-  font-size: 1em;
+  font-weight: normal;
+  font-size: 0.8em;
 }
 
 .fatfooter {
@@ -11605,6 +11614,7 @@ body {
 
 @media screen and (min-width: 767px) {
   .pcMenuUse .header .container:nth-child(2) {
+    margin-bottom: -45px;
     position: relative;
   }
   .pcMenuUse .header .container:nth-child(2)::before {
@@ -11612,7 +11622,7 @@ body {
     position: absolute;
     top: 0;
     right: 15px;
-    bottom: -45px;
+    bottom: 0px;
     left: 15px;
     display: block;
     border-radius: 50px;
@@ -11634,14 +11644,10 @@ body {
       background-position-x: -100%;
     }
   }
-  .menu {
-    margin-bottom: -45px;
-  }
   .menu ul {
     max-width: 1100px;
     margin: 0 auto;
     padding: 25px 0;
-    overflow-x: auto;
   }
   .menu ul li {
     padding-bottom: 0;
@@ -11675,7 +11681,7 @@ body {
 }
 
 .menuFix .wrapper {
-  padding-top: 115px;
+  padding-top: 135px;
 }
 .menuFix .header {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
@@ -11695,6 +11701,9 @@ body {
 }
 .menuFix .menu a {
   padding: 6px 0;
+}
+.menuFix.pcMenuUse .header .container:nth-child(2) {
+  margin-bottom: 0px;
 }
 
 a:focus {
@@ -11749,6 +11758,10 @@ a:focus {
 }
 .mobileMenuUse .sidebarCtrl {
   margin-right: 0px;
+}
+
+.footerMenu nav > ul > li {
+  margin: 0 15px;
 }
 
 footer {
@@ -11939,8 +11952,8 @@ footer .footerIcon a:focus:after {
 }
 .footerMenu ul {
   display: flex;
-  justify-content: space-between;
   padding: 0;
+  justify-content: flex-start;
 }
 .footerMenu ul li {
   list-style: none;

@@ -5459,6 +5459,7 @@ footer .footerLogo {
   flex: 0 1 auto;
 }
 footer .footerInfo {
+  width: 45%;
   padding-right: 20px;
   display: flex;
   flex-direction: column;
@@ -5568,6 +5569,7 @@ footer .footerIcon a:focus:after {
 }
 
 .footerMenu {
+  width: 54%;
   position: relative;
   margin: 0 0 0 auto;
 }
@@ -5579,15 +5581,21 @@ footer .footerIcon a:focus:after {
 .footerMenu nav {
   margin-bottom: 10%;
 }
+.footerMenu nav > ul > li {
+  width: calc(25% - 20px);
+  margin: 0 0 20px 20px !important;
+}
 .footerMenu ul {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
   padding: 0;
 }
 .footerMenu ul li {
   list-style: none;
 }
 .footerMenu ul li + li {
-  margin-left: 30px;
+  margin: 0 0 20px 30px;
 }
 .footerMenu ul li a {
   color: #fff;
@@ -5607,7 +5615,8 @@ footer .footerIcon a:focus:after {
   margin: 0 0 10px 0;
 }
 .footerMenu ul li ul li a {
-  font-size: 1em;
+  font-weight: normal;
+  font-size: 0.8em;
 }
 
 .fatfooter {
