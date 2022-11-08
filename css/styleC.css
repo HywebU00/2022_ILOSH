@@ -13800,72 +13800,68 @@ h2.title {
   content: "\e003";
 }
 .reservationForm .bottomInfo li.seat .con {
+  overflow-x: auto;
   display: flex;
-  flex-wrap: wrap;
+  padding: 0;
+  min-width: 400px;
 }
 .reservationForm .bottomInfo li.seat .con .seatBox {
-  width: calc((100% - 30px) / 2);
+  flex-grow: 1;
+  padding: 20px;
 }
 @media screen and (max-width: 575px) {
   .reservationForm .bottomInfo li.seat .con .seatBox {
     width: 100%;
   }
-  .reservationForm .bottomInfo li.seat .con .seatBox::before {
-    content: "左邊";
-    font-size: 14px;
-    margin-bottom: 10px;
-    font-weight: bold;
-    display: block;
-  }
 }
-.reservationForm .bottomInfo li.seat .con .seatBox:nth-child(2) {
-  margin-left: 30px;
+.reservationForm .bottomInfo li.seat .con .seatBox + .seatBox {
+  border: 1px solid #ddd;
+  border-width: 0 0 0 1px;
 }
 @media screen and (max-width: 575px) {
-  .reservationForm .bottomInfo li.seat .con .seatBox:nth-child(2) {
-    margin: 30px 0 0 0;
+  .reservationForm .bottomInfo li.seat .con .seatBox + .seatBox {
+    border-width: 1px 0 0;
   }
-  .reservationForm .bottomInfo li.seat .con .seatBox:nth-child(2)::before {
-    content: "右邊";
-    font-size: 14px;
-    margin-bottom: 10px;
-    font-weight: bold;
+}
+.reservationForm .bottomInfo li.seat .con .seatBox .info {
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+@media screen and (max-width: 575px) {
+  .reservationForm .bottomInfo li.seat .con .seatBox .info {
     display: block;
   }
 }
-.reservationForm .bottomInfo li.seat .con ul {
+.reservationForm .bottomInfo li.seat .con table {
   padding: 0;
   list-style: none;
-  display: flex;
-  flex-wrap: wrap;
 }
-.reservationForm .bottomInfo li.seat .con ul li {
+.reservationForm .bottomInfo li.seat .con table td {
+  border: none;
   color: #888;
-  padding: 0;
-  list-style: none;
-  width: calc((100% - 10px) / 3);
-  margin-left: 5px;
+  padding: 5px;
 }
-.reservationForm .bottomInfo li.seat .con ul li:nth-child(3n+1) {
+.reservationForm .bottomInfo li.seat .con table td:nth-child(3n+1) {
   margin-left: 0;
 }
-.reservationForm .bottomInfo li.seat .con ul li:nth-child(n+4) {
+.reservationForm .bottomInfo li.seat .con table td:nth-child(n+4) {
   margin-top: 5px;
 }
-.reservationForm .bottomInfo li.seat .con ul li input {
+.reservationForm .bottomInfo li.seat .con table td input {
   opacity: 0;
   position: absolute;
 }
-.reservationForm .bottomInfo li.seat .con ul li input:checked + label {
+.reservationForm .bottomInfo li.seat .con table td input:checked + label {
   background: #a029a2;
 }
-.reservationForm .bottomInfo li.seat .con ul li input:checked + label::before {
+.reservationForm .bottomInfo li.seat .con table td input:checked + label::before {
   content: "\e006";
 }
-.reservationForm .bottomInfo li.seat .con ul li input:focus + label {
+.reservationForm .bottomInfo li.seat .con table td input:focus + label {
   box-shadow: 0 0 0 2px #781f79;
 }
-.reservationForm .bottomInfo li.seat .con ul li label {
+.reservationForm .bottomInfo li.seat .con table td label {
   width: 100%;
   height: 100%;
   margin: 0;
@@ -13880,39 +13876,39 @@ h2.title {
   position: relative;
   cursor: pointer;
 }
-.reservationForm .bottomInfo li.seat .con ul li label::before {
+.reservationForm .bottomInfo li.seat .con table td label::before {
   color: #fff;
   font-size: 20px;
   content: "\e007";
   top: 2px;
   position: relative;
 }
-.reservationForm .bottomInfo li.seat .con ul li label:hover {
+.reservationForm .bottomInfo li.seat .con table td label:hover {
   background: #a029a2;
 }
-.reservationForm .bottomInfo li.seat .con ul li.active label::before {
+.reservationForm .bottomInfo li.seat .con table td.active label::before {
   content: "\e006";
 }
-.reservationForm .bottomInfo li.seat .con ul li.full input {
+.reservationForm .bottomInfo li.seat .con table td.full input {
   display: none;
 }
-.reservationForm .bottomInfo li.seat .con ul li.full label {
+.reservationForm .bottomInfo li.seat .con table td.full label {
   cursor: not-allowed;
   background: #ccc;
   border-color: #ccc;
 }
-.reservationForm .bottomInfo li.seat .con ul li.full label::before {
+.reservationForm .bottomInfo li.seat .con table td.full label::before {
   content: "\e008";
 }
-.reservationForm .bottomInfo li.seat .con ul li.close input {
+.reservationForm .bottomInfo li.seat .con table td.close input {
   display: none;
 }
-.reservationForm .bottomInfo li.seat .con ul li.close label {
+.reservationForm .bottomInfo li.seat .con table td.close label {
   cursor: not-allowed;
   background: none;
   border: 1px solid #ccc;
 }
-.reservationForm .bottomInfo li.seat .con ul li.close label::before {
+.reservationForm .bottomInfo li.seat .con table td.close label::before {
   color: #ccc;
   content: "\e005";
 }
