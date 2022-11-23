@@ -8,6 +8,15 @@
     background: $primaryColor;
     padding: 2.5% 20px;
     .list {
+      flex-grow: 1;
+      margin-bottom: 10px;
+      min-width: 187px;
+      &:nth-last-child(2) {
+        flex-grow: 0;
+      }
+      @include screen('mobile') {
+        width: 100% !important;
+      }
       & + .list {
         margin-left: 5px;
         @include screen('mobile') {
@@ -20,9 +29,12 @@
     max-width: 970px;
     margin: 0 auto;
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-start;
+    align-items: flex-end;
     @include screen('mobile') {
       flex-direction: column;
+      align-items: center;
     }
   }
   .label {
@@ -36,20 +48,26 @@
     }
   }
   .inputBox {
+    color: #fff;
     display: flex;
+    align-items: center;
     @include screen('xs_mobile') {
       flex-direction: column;
     }
   }
+  select,
   input {
     width: 100%;
+    height: 42px;
     font-size: 1em;
     color: #808080;
-    border: #c9c9c9 1px solid;
-    background: #fff url('../images/icon02.png') no-repeat;
+    margin: 0 5px;
+    border: #c9c9c9 1px solid !important;
+    // background: #fff url('../images/icon02.png') no-repeat;
     background-position: calc(100% - 15px) center;
-    margin: 0;
-    padding: 8px 45px 8px 15px;
+    // padding: 8px 45px 8px 15px;
+
+    padding: 8px 15px 8px 15px;
     & + input {
       margin-left: 5px;
       @include screen('xs_mobile') {
@@ -61,18 +79,13 @@
     }
   }
   .searchBox {
-    flex-basis: 23%;
-    input {
+    input.inputType {
       padding: 8px 8px 8px 45px;
       background: #fff url('../images/icon01.png') no-repeat;
       background-position: 15px center;
     }
   }
-  .dateSelectBox {
-    flex-basis: 46%;
-  }
   .departmentBox {
-    flex-grow: 1;
     select {
       font-size: 1em;
       color: #fff;
@@ -91,19 +104,22 @@
       }
     }
   }
+
+  .searchBtnBox {
+    margin: 0 0 10px auto;
+  }
   .searchBtn {
     background: $aColor;
     border: none;
     border-radius: 50px;
     color: #fff;
     white-space: nowrap;
-    margin: 0;
+    margin: 0 0 0 10px;
     padding: 0 15px;
     letter-spacing: 10px;
     font-weight: 500;
     text-indent: 10px;
     height: 42px;
-    margin-left: 15px;
     position: relative;
     z-index: 0;
     overflow: hidden;
@@ -131,6 +147,9 @@
         left: 0;
       }
     }
+  }
+  #selectDepartment {
+    border-width: 0px 0px 1px !important;
   }
 }
 
@@ -434,7 +453,8 @@
         min-width: 80px;
       }
       &:nth-child(2) {
-        min-width: 120px;
+        white-space: nowrap;
+        min-width: 140px;
         text-align: left;
       }
       &:nth-child(3) {
@@ -449,15 +469,16 @@
         min-width: 110px;
       }
       &:nth-child(6) {
-        min-width: 90px;
+        min-width: 70px;
         .downloadBtnBlock {
           display: flex;
           flex-wrap: wrap;
           align-items: center;
+          justify-content: center;
           a {
             display: block;
-            font-size: 12px;
-            padding: 2px 3px;
+            font-size: 14px;
+            padding: 3px 3px 1px;
             background: $downloadColor;
             line-height: 1;
             color: #fff;
@@ -531,7 +552,7 @@
       }
     }
     td {
-      padding: 15px 5px;
+      padding: 15px 10px;
       font-size: 16px;
       font-family: $ff-urbanist;
       @include screen('tablet') {
@@ -553,6 +574,22 @@
           border-right: 1px solid #ddd;
         }
       }
+      &:nth-child(3) {
+        white-space: nowrap;
+      }
+      &:nth-child(4) {
+        padding: 0;
+        a {
+          padding: 15px 10px;
+        }
+      }
+    }
+  }
+  a {
+    display: block;
+    color: #000;
+    &:hover {
+      color: $aHover;
     }
   }
 }

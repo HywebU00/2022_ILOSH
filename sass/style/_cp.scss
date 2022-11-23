@@ -589,26 +589,20 @@ h2.title {
   padding-top: 20px !important;
   display: flex !important;
   flex-wrap: wrap;
-  > li {
-    width: calc((100% - 40px) / 3) !important;
+  position: relative;
+  margin: 0 -10px;
+  & > li {
+    width: calc(100% / 3 - 20px) !important;
     border: #ddd 1px solid;
     background: #fff;
     padding: 0 !important;
-    margin-top: 20px;
+    margin: 20px 10px 0;
     box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0);
     @include screen('tablet') {
       width: calc((100% - 40px) / 2) !important;
     }
     &::before {
       border-width: 5px;
-    }
-    & + li {
-      margin-left: 20px;
-    }
-    @include screen('tabletMin') {
-      &:nth-child(3n + 1) {
-        margin-left: 0;
-      }
     }
     @include screen('tablet') {
       &:nth-child(2n + 1) {
@@ -657,7 +651,7 @@ h2.title {
         transition: 0.3s $cubic;
         @include screen('mobile') {
           width: calc((100% - 40px) / 2) !important;
-          margin: 20px 0 0 20px;
+          margin: 20px 10px 0;
           padding: 0;
           border: #ddd 1px solid;
           &:nth-child(2n + 1) {
@@ -776,7 +770,7 @@ h2.title {
           letter-spacing: 1px;
           font-size: 14px;
           padding-right: 10px;
-          color: #333;
+          color: #888;
           position: relative;
           flex-shrink: 0;
           &::before {
@@ -790,8 +784,8 @@ h2.title {
           }
         }
         .infoTxt {
+          color: #333;
           margin-left: 10px;
-          color: #888;
           font-size: 0.938em;
         }
         ul.info {
@@ -805,18 +799,9 @@ h2.title {
     }
   }
   .gridList {
-    > li {
-      margin: 0 !important;
-      width: calc((100% - 90px) / 4) !important;
-      & + li {
-        margin-left: 30px !important;
-      }
-      &:nth-child(4n + 1) {
-        margin-left: 0 !important;
-      }
-      &:nth-child(n + 5) {
-        margin-top: 20px !important;
-      }
+    & > li {
+      margin: 0 10px 20px !important;
+      width: calc(100% / 4 - 20px) !important;
     }
   }
 }
@@ -879,6 +864,7 @@ h2.title {
     h2 {
       padding: 0;
       margin: 0 0 20px 0;
+      line-height: 1.4;
     }
     .contentBlock {
       display: flex;
