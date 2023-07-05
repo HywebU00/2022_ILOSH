@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="no-js">
+  <head>
+    <meta name="robots" content="noindex" />
+    <!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>出版品條列頁</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- slick css-->
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+    <!-- 燈箱facybox -->
+    <link rel="stylesheet" type="text/css" href="vendor/fancybox/jquery.fancybox.min.css" />
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/styleC.css" id="changeStyle" />
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon" />
+  </head>
+
+  <body class="colorStyleA pcMenuUse">
+    <!-- 直接跳主內容區 -->
+    <a class="goCenter" href="#center" tabindex="1">按Enter到主內容區</a>
+    <!-- wrapper Start -->
+    <div class="wrapper">
+      <!-- header Start -->
+      <header class="header">
+        <div class="container">
+          <a class="accesskey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a>
+          <h1>
+            <a href="index.htm">
+              <picture>
+                <source media="(min-width: 1100px)" data-srcset="images/logo.png" />
+                <source media="(max-width: 1100px)" data-srcset="images/logo_m.png" />
+                <img data-src="images/logo.png" class="lazy" />
+              </picture>
+
+              <span>研究成果網</span>
+            </a>
+          </h1>
+          <!-- noscript -->
+          <noscript>
+            您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結
+            <a href="#">網站導覽</a>
+          </noscript>
+          <!-- navigation Start -->
+          <nav class="navigation" role="navigation" aria-label="Site">
+            <!-- 新增div navlist -->
+            <div class="navlist">
+              <ul>
+                <li><a href="mp3.htm">回首頁</a></li>
+                <li><a href="#">回勞安所主網</a></li>
+                <li><a href="#">網站導覽</a></li>
+                <!--li><a href="#">常見問答</a></li>
+                <li><a href="#">聯絡我們</a></li-->
+              </ul>
+            </div>
+            <!-- font_size -->
+            <div class="secNavList">
+              <div class="font_size">
+                <a href="#" title="字型大小">A +</a>
+                <!-- 英文用<span>font-size：</span> -->
+                <ul>
+                  <li><a href="#" class="small"></a></li>
+                  <li><a href="#" class="medium"></a></li>
+                  <li><a href="#" class="large"></a></li>
+                </ul>
+              </div>
+              <a class="loginBtn" href="#">預約登入<i></i></a>
+            </div>
+          </nav>
+        </div>
+        <!-- navigation End -->
+        <!-- menu Start -->
+        <div class="container">
+          <nav class="menu" role="navigation" aria-label="About page">
+            <ul>
+              <li>
+                <a href="#">各年度研究報告</a>
+                <!--ul>
+                      <li><a href="#">關於虛擬環境VDI預約 </a></li>
+                      <li><a href="#">位置圖與交通資訊</a></li>
+                    </ul-->
+              </li>
+              <li><a href="#">簡訊</a></li>
+              <li><a href="#">研究季刊</a></li>
+              <li><a href="#">技術叢書</a></li>
+              <li><a href="#">研究年報</a></li>
+              <li><a href="#">其他出版品</a></li>
+              <li><a href="#">專利技術</a></li>
+            </ul>
+          </nav>
+          <!-- menu End -->
+        </div>
+      </header>
+      <!-- header End -->
+      <!-- main Start -->
+      <div class="innerBanner">
+        <div class="blockA">
+          <img src="images/inner_bannerA.jpg" alt="" />
+        </div>
+        <div class="blockB">
+          <img src="images/inner_bannerB.jpg" alt="" />
+        </div>
+        <!-- h2節點 -->
+        <h2 class="pageTitle">簡訊</h2>
+      </div>
+      <div id="center" class="main innerpage">
+        <!-- 內頁新增一個classname-->
+        <div class="container">
+          <!-- 主要內容區 -->
+          <div class="center_block">
+            <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
+            <!-- breadcrumb路徑 -->
+            <div class="breadcrumb">
+              <ul>
+                <li><a href="#">首頁</a></li>
+                <li><a href="#">節點</a></li>
+                <li>節點</li>
+              </ul>
+            </div>
+            <!-- function_panel -->
+            <div class="function_panel">
+              <!--條列頁不會有發布日期-->
+              <!--div class="publish_time"><span>發布日期：</span><time>2019-01-01</time></div-->
+              <!-- function功能區塊 -->
+              <div class="function switchBlock">
+                <ul class="switch">
+                  <li class="typeList"><a href="#" title="條列式"></a></li>
+                  <li class="typeGrid active"><a href="#" title="區塊式"></a></li>
+                </ul>
+              </div>
+              <!-- function功能區塊 -->
+              <div class="function">
+                <ul>
+                  <li class="back"><a href="javascript:history.back()" title="回上一頁">回上一頁</a></li>
+                  <li class="print"><a href="#" title="友善列印" onclick="window.print()">友善列印</a></li>
+                </ul>
+              </div>
+              <!-- 社群分享 -->
+              <div class="share" title="分享">
+                <ul>
+                  <!--只留fb, twitter, line, plurk-->
+                  <li>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=這裡帶入分享的網址" target="_blank"><img src="images/basic/icon_facebook.svg" alt="facebook" /></a>
+                  </li>
+                  <li>
+                    <a href="http://twitter.com/share?text=標題&url=這裡帶入分享的網址" target="_blank"><img src="images/basic/icon_twitter.svg" alt="twitter" /></a>
+                  </li>
+                  <li>
+                    <a href="https://social-plugins.line.me/lineit/share?url=這裡帶入分享的網址" target="_blank"><img src="images/basic/icon_line.svg" alt="line" /></a>
+                  </li>
+                  <li>
+                    <a href="https://www.plurk.com/?qualifier=shares&status=這裡帶入分享的網址" target="_blank"><img src="images/basic/icon_plurk.svg" alt="Plurk" /></a>
+                  </li>
+                  <!--li>
+                    <a href="#"><img src="images/basic/icon_youtube.svg" alt="youtube" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="images/basic/icon_instagram.svg" alt="instagram" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="images/basic/icon_linkedin.svg" alt="LinkedIn" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="images/basic/icon_rss.svg" alt="RSS" /></a>
+                  </li-->
+                </ul>
+              </div>
+            </div>
+            <!-- LP Start -->
+            <section class="lp listGrid publications">
+              <!-- category -->
+              <div class="category">
+                <ul>
+                  <li><a href="#">資料大類</a></li>
+                  <li><a href="#">標籤2</a></li>
+                  <li><a href="#">標籤3</a></li>
+                  <li><a href="#">標籤4</a></li>
+                  <li><a href="#">標籤5</a></li>
+                </ul>
+              </div>
+              <!-- 文字列表 -->
+              <div class="list">
+                <ul class="gridList">
+                  <li>
+                    <a href="#">
+                      <div class="pic"><img data-src="images/noimage.png" class="lazy" /></div>
+                      <div class="contentBlock">
+                        <!--h3 class="title">透過勞保資料觀測臺灣勞動市場人力變化</h3-->
+                        <ul class="info">
+                          <li>
+                            <div class="label">出版時間</div>
+                            <div class="infoTxt">111年10月</div>
+                          </li>
+                          <li>
+                            <div class="label">期別</div>
+                            <div class="infoTxt">35</div>
+                          </li>
+                        </ul>
+                        <div class="txt">透過勞保資料觀測臺灣勞動市場人力變化</div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="pic"><img data-src="public/ex34.png" class="lazy" /></div>
+                      <div class="contentBlock">
+                        <!--h3 class="title">勞工健康指標研究</h3-->
+                        <ul class="info">
+                          <li>
+                            <div class="label">出版時間</div>
+                            <div class="infoTxt">111年06月</div>
+                          </li>
+                          <li>
+                            <div class="label">期別</div>
+                            <div class="infoTxt">34</div>
+                          </li>
+                        </ul>
+                        <div class="txt">守護勞工的最前線「勞安加衛體驗館」隆重開幕</div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="pic"><img data-src="public/ex33.png" class="lazy" /></div>
+                      <div class="contentBlock">
+                        <ul class="info">
+                          <li>
+                            <div class="label">出版時間</div>
+                            <div class="infoTxt">111年04月</div>
+                          </li>
+                          <li>
+                            <div class="label">期別</div>
+                            <div class="infoTxt">33</div>
+                          </li>
+                        </ul>
+                        <div class="txt">2022應用AI技術輔助沖壓機等高危害作業安全</div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="pic"><img data-src="public/ex32.png" class="lazy" /></div>
+                      <div class="contentBlock">
+                        <ul class="info">
+                          <li>
+                            <div class="label">出版時間</div>
+                            <div class="infoTxt">110年11月</div>
+                          </li>
+                          <li>
+                            <div class="label">期別</div>
+                            <div class="infoTxt">32</div>
+                          </li>
+                        </ul>
+                        <div class="txt">2021臺灣創新技術博覽會 勞安所打造安全職場新高度</div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="pic"><img data-src="public/ex31.png" class="lazy" /></div>
+                      <div class="contentBlock">
+                        <ul class="info">
+                          <li>
+                            <div class="label">出版時間</div>
+                            <div class="infoTxt">110年09月</div>
+                          </li>
+                          <li>
+                            <div class="label">期別</div>
+                            <div class="infoTxt">31</div>
+                          </li>
+                        </ul>
+                        <div class="txt">預防墜落—水平母索的安裝及使用安全</div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="pic"><img data-src="images/noimage.png" class="lazy" /></div>
+                      <div class="contentBlock">
+                        <ul class="info">
+                          <li>
+                            <div class="label">出版時間</div>
+                            <div class="infoTxt">111年10月</div>
+                          </li>
+                          <li>
+                            <div class="label">期別</div>
+                            <div class="infoTxt">35</div>
+                          </li>
+                        </ul>
+                        <div class="txt">透過勞保資料觀測臺灣勞動市場人力變化</div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="pic"><img data-src="images/noimage.png" class="lazy" /></div>
+                      <div class="contentBlock">
+                        <ul class="info">
+                          <li>
+                            <div class="label">出版時間</div>
+                            <div class="infoTxt">111年10月</div>
+                          </li>
+                          <li>
+                            <div class="label">期別</div>
+                            <div class="infoTxt">35</div>
+                          </li>
+                        </ul>
+                        <div class="txt">透過勞保資料觀測臺灣勞動市場人力變化</div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="pic"><img data-src="images/noimage.png" class="lazy" /></div>
+                      <div class="contentBlock">
+                        <ul class="info">
+                          <li>
+                            <div class="label">出版時間</div>
+                            <div class="infoTxt">111年10月</div>
+                          </li>
+                          <li>
+                            <div class="label">期別</div>
+                            <div class="infoTxt">35</div>
+                          </li>
+                        </ul>
+                        <div class="txt">透過勞保資料觀測臺灣勞動市場人力變化</div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="pic"><img data-src="images/noimage.png" class="lazy" /></div>
+                      <div class="contentBlock">
+                        <ul class="info">
+                          <li>
+                            <div class="label">出版時間</div>
+                            <div class="infoTxt">111年10月</div>
+                          </li>
+                          <li>
+                            <div class="label">期別</div>
+                            <div class="infoTxt">35</div>
+                          </li>
+                        </ul>
+                        <div class="txt">透過勞保資料觀測臺灣勞動市場人力變化</div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="pic"><img data-src="images/noimage.png" class="lazy" /></div>
+                      <div class="contentBlock">
+                        <ul class="info">
+                          <li>
+                            <div class="label">出版時間</div>
+                            <div class="infoTxt">111年10月</div>
+                          </li>
+                          <li>
+                            <div class="label">期別</div>
+                            <div class="infoTxt">35</div>
+                          </li>
+                        </ul>
+                        <div class="txt">透過勞保資料觀測臺灣勞動市場人力變化</div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </section>
+            <!-- LP End -->
+            <!-- Pagination -->
+            <div class="pagination">
+              <form action="">
+                <div class="form_inline">
+                  <div class="total">
+                    共<span>308</span>筆資料，第<span>1/18</span>頁，每頁顯示
+                    <select name="" id="" aria-label="每頁顯示">
+                      <option value="">10</option>
+                      <option value="">20</option>
+                      <option value="">30</option>
+                      <option value="">40</option>
+                    </select>
+                    筆， <input type="button" value="確定" class="btn btn-submit" />
+                  </div>
+                </div>
+              </form>
+              <ul class="page">
+                <li class="first"><a href="#" title="第一頁">第一頁 </a></li>
+                <li class="prev"><a href="#" title="回上一頁">回上一頁 </a></li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li class="next"><a href="#" title="下一頁">下一頁 </a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- footer Start-->
+      <footer>
+        <div class="container">
+          <div class="footerBottomInfo">
+            <div class="footerInfo">
+              <a class="accesskey" href="#aZ" id="aZ" accesskey="Z" title="頁尾區">:::</a>
+              <div class="footerLogo">
+                <img src="images/footer_logo.png" alt="" class="img-responsive" />
+              </div>
+              <p class="Copyright">勞動部勞動及職業安全衛生研究所版權所有</p>
+              <p>
+                本所服務專線:(02)2660-7600 傳真號碼:(02)2660-7732<br />
+                本所服務專線:(02)2660-7600 傳真號碼:(02)2660-7732<br />
+                本所地址:22143新北市汐止區橫科路407巷99號<br />
+                本網站最佳瀏覽解析度為 1280*800 以上
+              </p>
+            </div>
+
+            <div class="footerMenu">
+              <nav>
+                <ul>
+                  <li>
+                    <a href="#">關於我們</a>
+                    <ul>
+                      <li><a href="#">關於虛擬環境VDI預約</a></li>
+                      <li><a href="#">位置圖與交通資訊</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">訊息公告</a>
+                    <ul>
+                      <li><a href="#">系統公告</a></li>
+                      <li><a href="#">最新消息</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">資源服務</a>
+                    <ul>
+                      <li><a href="#">申請表單下載</a></li>
+                      <li><a href="#">常見問答</a></li>
+                      <li><a href="#">相關網站連結</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">線上預約</a>
+                    <ul>
+                      <li><a href="#">可預約資源查詢</a></li>
+                      <li><a href="#">填寫預約申請</a></li>
+                      <li><a href="#">案件與預約資料</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="footerData">
+              <div class="footerUpdate">
+                <span class="counter">瀏覽人次<em>46476653</em></span>
+                <span class="update">系統最後更新日期<em>2022-12-12</em></span>
+              </div>
+              <div class="footerIcon">
+                <a target="_blank" href="javascript:;" title="另開視窗">
+                  <img src="images/basic/accessibility.jpg" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- footer End -->
+    </div>
+    <a href="javascript:;" class="scrollToTop">回頁首</a>
+    <!-- JQ -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <!-- 外掛 plugin js -->
+    <script src="vendor/jquery.easing.min.js"></script>
+    <!-- ease -->
+    <script src="vendor/slick/slick.min.js "></script>
+    <!-- slick -->
+    <script src="vendor/slick/slick-lightbox.js "></script>
+    <!-- slick lightbox -->
+    <script src="vendor/lazyload/lazyload.js"></script>
+    <!-- lazyload -->
+    <script src="vendor/picturefill/picturefill.min.js" async></script>
+    <!-- picturefill -->
+    <script src="vendor/scrolltable/jquery.scroltable.min.js"></script>
+    <!-- scrolltable -->
+    <!-- ILOSH -->
+    <script src="js/ILOSH.js"></script>
+    <!-- 客製js -->
+    <script src="js/customize.js"></script>
+  </body>
+</html>

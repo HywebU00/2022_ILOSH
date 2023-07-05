@@ -26,11 +26,11 @@
     <!--切換主選單用-->
 
     <!-- 直接跳主內容區 -->
-    <a class="goCenter" href="#center" tabindex="1">按Enter到主內容區</a>
     <!-- wrapper Start -->
     <div class="wrapper">
       <!-- header Start -->
       <header class="header">
+      <a class="goCenter" href="#center" tabindex="1">按Enter到主內容區</a>
         <div class="container">
           <a class="accesskey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a>
           <h1>
@@ -66,9 +66,9 @@
                 <a href="#" title="字型大小">A +</a>
                 <!-- 英文用<span>font-size：</span> -->
                 <ul>
-                  <li><a href="#" class="small"></a></li>
-                  <li><a href="#" class="medium"></a></li>
-                  <li><a href="#" class="large"></a></li>
+                  <li><a href="#" class="small">小</a></li>
+                  <li><a href="#" class="medium">中</a></li>
+                  <li><a href="#" class="large">大</a></li>
                 </ul>
               </div>
               <a class="loginBtn" href="#">預約登入<i></i></a>
@@ -82,29 +82,18 @@
           <nav class="menu" role="navigation" aria-label="About page">
             <ul>
               <li>
-                <a href="#">最新研究成果</a>
+                <a href="#">各年度研究報告</a>
+                <!--ul>
+                  <li><a href="#">關於虛擬環境VDI預約 </a></li>
+                  <li><a href="#">位置圖與交通資訊</a></li>
+                </ul-->
               </li>
-              <li>
-                <a href="#">簡訊</a>
-              </li>
-              <li>
-                <a href="#">研究季刊</a>
-              </li>
-              <li>
-                <a href="#">技術叢書</a>
-              </li>
-              <li>
-                <a href="#">研究年報</a>
-              </li>
-              <li>
-                <a href="#">其它出版品</a>
-              </li>
-              <li>
-                <a href="#">專利技術</a>
-              </li>
-              <li>
-                <a href="#">資源服務</a>
-              </li>
+              <li><a href="#">簡訊</a></li>
+              <li><a href="#">研究季刊</a></li>
+              <li><a href="#">技術叢書</a></li>
+              <!--li><a href="#">研究年報</a></li-->
+              <li><a href="#">其他出版品</a></li>
+              <li><a href="#">專利技術</a></li>
             </ul>
           </nav>
           <!-- menu End -->
@@ -121,9 +110,9 @@
         <section class="mpBanner">
           <div class="container">
             <div class="titleBox">最新研究成果</div>
-            <div class="txtBox">
+            <!--div class="txtBox">
               <div class="slideCon">Latest research</div>
-            </div>
+            </-->
           </div>
         </section>
         <!-- 模組：大圖輪播  end-->
@@ -135,39 +124,58 @@
               <div class="searchBox list">
                 <div class="label">研究主題</div>
                 <div class="inputBox">
-                  <input type="text" name="keywords" placeholder="請輸入關鍵字" id="" />
+                  <input type="text" name="keywords" placeholder="請輸入關鍵字，會同時搜尋標題、摘要、關鍵字" id="" />
                 </div>
               </div>
               <div class="dateSelectBox list">
                 <div class="label">年度</div>
                 <div class="inputBox">
-                  <input type="text" name="from" placeholder="請選擇日期" id="from" data-language="zh" />
-                  <input type="text" name="to" placeholder="請選擇日期" id="to" data-language="zh" />
+                  <select name="selectDepartment" id="selectDepartment">
+                    <option>請選擇</option>
+                    <option>111</option>
+                    <option>110</option>
+                    <option>109</option>
+                  </select>
+                  ~
+                  <select name="selectDepartment" id="selectDepartment">
+                    <option>請選擇</option>
+                    <option>111</option>
+                    <option>110</option>
+                    <option>109</option>
+                  </select>
+                  <!--input type="text" name="from" placeholder="請選擇日期" id="from" data-language="zh" />
+                  <input type="text" name="to" placeholder="請選擇日期" id="to" data-language="zh" /-->
                 </div>
               </div>
               <div class="departmentBox list">
-                <div class="label">研究單位</div>
+                <div class="label">搜尋單元</div>
                 <div class="inputBox">
                   <select name="selectDepartment" id="selectDepartment">
-                    <option>請選擇</option>
+                    <option>全部</option>
+                    <option>各年度研究報告</option>
+                    <option>簡訊</option>
+                    <option>研究季刊</option>
+                    <option>技術叢書</option>
+                    <option>其他出版品</option>
+                    <option>專利技術</option>
                   </select>
-                  <button class="searchBtn">搜尋</button>
                 </div>
               </div>
+              <!--請注意，搜尋按鈕不應該被包在單一條件下-->
+              <button class="searchBtn">搜尋</button>
             </form>
           </div>
         </section>
         <!-- 搜尋  end-->
-        <!-- list  start-->
+        <!-- list start，綜合各單元撈取最近10筆-->
         <section class="infoListBlock">
           <div class="container">
             <div class="infoList tableList">
               <table>
                 <thead>
                   <tr>
+                    <th>單元出處</th>
                     <th>出版年</th>
-                    <th>計畫編號</th>
-                    <th>研究單位</th>
                     <th>研究報告名稱</th>
                     <th>發布日期</th>
                     <th>下載</th>
@@ -175,109 +183,107 @@
                 </thead>
                 <tbody>
                   <tr>
+                    <td class="nowrap">各年度研究報告</td>
                     <td>111年</td>
-                    <td>ILOSH110-M301</td>
-                    <td>勞動市場研究組</td>
-                    <td>產業人才投資方案訓練效益評估</td>
+                    <!--進內頁連結，設定可以整格連結-->
+                    <td>
+                      <!--另開到原單元內容頁-->
+                      <a href="http://10.10.4.84:8081/iLosh/wSite/ct?xItem=16942&ctNode=322&mp=3" target="_blank">奈米微粒作業人員職業危害調查研究</a>
+                    </td>
+                    <!--表格內容若需要不換行，請在該 td 增加class nowrap，需要置中，請在該 td 增加class center-->
+                    <td class="nowrap">2022/5/12</td>
+                    <td>
+                      <div class="downloadBtnBlock"><a href="#">PDF</a></div>
+                      <!--一次只會取一個下載連結-->
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="nowrap">各年度研究報告</td>
+                    <td>111年</td>
+                    <td><a href="#" target="_blank">產業人才投資方案訓練效益評估產業人才投資方案訓練效益評估產業人才投資方案訓練效益評估產業人才投資方案訓練效益評估</a></td>
+                    <td class="nowrap">2022/5/12</td>
+                    <td>
+                      <div class="downloadBtnBlock"><a href="#">PDF</a></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="nowrap">各年度研究報告</td>
+                    <td>111年</td>
+                    <td><a href="#">善用中高齡及高齡員工活化企業人力資源</a></td>
                     <td>2022/5/12</td>
                     <td>
                       <div class="downloadBtnBlock"><a href="#">PDF</a></div>
                     </td>
                   </tr>
                   <tr>
+                    <td class="nowrap">簡訊</td>
                     <td>111年</td>
-                    <td>ILOSH110-M301</td>
-                    <td>勞動市場研究組</td>
-                    <td>產業人才投資方案訓練效益評估</td>
-                    <td>2022/5/12</td>
+                    <td><a href="#">守護勞工的最前線「勞安加衛體驗館」隆重開幕</a></td>
+                    <td class="nowrap">2022/5/12</td>
                     <td>
-                      <div class="downloadBtnBlock"><a href="#">DOC</a><a href="#">PDF</a><a href="#">ZIP</a></div>
+                      <div class="downloadBtnBlock"><a href="#">ZIP</a></div>
+                      <!--簡訊/研究季刊可否取打包的ZIP-->
                     </td>
                   </tr>
                   <tr>
+                    <td class="nowrap">研究季刊</td>
                     <td>111年</td>
-                    <td>ILOSH110-M301</td>
-                    <td>勞動市場研究組</td>
-                    <td>產業人才投資方案訓練效益評估</td>
-                    <td>2022/5/12</td>
+                    <td><a href="#">第30卷第1期</a></td>
+                    <td class="nowrap">2022/5/12</td>
                     <td>
-                      <div class="downloadBtnBlock"><a href="#">DOC</a><a href="#">PDF</a><a href="#">ZIP</a></div>
+                      <div class="downloadBtnBlock"><a href="#">ZIP</a></div>
+                      <!--簡訊/研究季刊可否取打包的ZIP-->
                     </td>
                   </tr>
                   <tr>
+                    <td class="nowrap">技術叢書</td>
                     <td>111年</td>
-                    <td>ILOSH110-M301</td>
-                    <td>勞動市場研究組</td>
-                    <td>產業人才投資方案訓練效益評估</td>
+                    <td><a href="#">高空工作車使用安全管理指引</a></td>
                     <td>2022/5/12</td>
                     <td>
-                      <div class="downloadBtnBlock"><a href="#">DOC</a><a href="#">PDF</a><a href="#">ZIP</a></div>
+                      <div class="downloadBtnBlock"><a href="#">PDF</a></div>
                     </td>
                   </tr>
                   <tr>
+                    <td class="nowrap">其他出版品</td>
                     <td>111年</td>
-                    <td>ILOSH110-M301</td>
-                    <td>勞動市場研究組</td>
-                    <td>產業人才投資方案訓練效益評估</td>
+                    <td><a href="#">防疫旅宿通風空調換氣情形檢視重點</a></td>
                     <td>2022/5/12</td>
                     <td>
-                      <div class="downloadBtnBlock"><a href="#">DOC</a><a href="#">PDF</a><a href="#">ZIP</a></div>
+                      <div class="downloadBtnBlock"><a href="#">PDF</a></div>
                     </td>
                   </tr>
                   <tr>
+                    <td class="nowrap">專利技術</td>
                     <td>111年</td>
-                    <td>ILOSH110-M301</td>
-                    <td>勞動市場研究組</td>
-                    <td>產業人才投資方案訓練效益評估</td>
+                    <td><a href="#">携帯式ナノ粒子サンプラ</a></td>
                     <td>2022/5/12</td>
                     <td>
-                      <div class="downloadBtnBlock"><a href="#">DOC</a><a href="#">PDF</a><a href="#">ZIP</a></div>
+                      <div class="downloadBtnBlock"><a href="#">PDF</a></div>
                     </td>
                   </tr>
                   <tr>
+                    <td class="nowrap">各年度研究報告</td>
                     <td>111年</td>
-                    <td>ILOSH110-M301</td>
-                    <td>勞動市場研究組</td>
-                    <td>產業人才投資方案訓練效益評估</td>
-                    <td>2022/5/12</td>
+                    <td><a href="#" target="_blank">產業人才投資方案訓練效益評估產業人才投資方案訓練效益評估產業人才投資方案訓練效益評估產業人才投資方案訓練效益評估</a></td>
+                    <td class="nowrap">2022/5/12</td>
                     <td>
-                      <div class="downloadBtnBlock"><a href="#">DOC</a><a href="#">PDF</a><a href="#">ZIP</a></div>
+                      <div class="downloadBtnBlock"><a href="#">PDF</a></div>
                     </td>
                   </tr>
                   <tr>
+                    <td class="nowrap">各年度研究報告</td>
                     <td>111年</td>
-                    <td>ILOSH110-M301</td>
-                    <td>勞動市場研究組</td>
-                    <td>產業人才投資方案訓練效益評估</td>
-                    <td>2022/5/12</td>
+                    <td><a href="#" target="_blank">產業人才投資方案訓練效益評估產業人才投資方案訓練效益評估產業人才投資方案訓練效益評估產業人才投資方案訓練效益評估</a></td>
+                    <td class="nowrap">2022/5/12</td>
                     <td>
-                      <div class="downloadBtnBlock"><a href="#">DOC</a><a href="#">PDF</a><a href="#">ZIP</a></div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>111年</td>
-                    <td>ILOSH110-M301</td>
-                    <td>勞動市場研究組</td>
-                    <td>產業人才投資方案訓練效益評估</td>
-                    <td>2022/5/12</td>
-                    <td>
-                      <div class="downloadBtnBlock"><a href="#">DOC</a><a href="#">PDF</a><a href="#">ZIP</a></div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>111年</td>
-                    <td>ILOSH110-M301</td>
-                    <td>勞動市場研究組</td>
-                    <td>產業人才投資方案訓練效益評估</td>
-                    <td>2022/5/12</td>
-                    <td>
-                      <div class="downloadBtnBlock"><a href="#">DOC</a><a href="#">PDF</a><a href="#">ZIP</a></div>
+                      <div class="downloadBtnBlock"><a href="#">PDF</a></div>
                     </td>
                   </tr>
                 </tbody>
               </table>
             </div>
-            <a href="#" class="moreBtn">成果一覽</a>
+            <a href="lptableSearchAll.htm" target="_blank" class="moreBtn">更多研究成果</a>
           </div>
         </section>
         <!-- list  end-->
@@ -305,35 +311,18 @@
               <nav>
                 <ul>
                   <li>
-                    <a href="#">關於我們</a>
-                    <ul>
-                      <li><a href="#">關於虛擬環境VDI預約</a></li>
+                    <a href="#">各年度研究報告</a>
+                    <!--ul>
+                      <li><a href="#">關於虛擬環境VDI預約 </a></li>
                       <li><a href="#">位置圖與交通資訊</a></li>
-                    </ul>
+                    </ul-->
                   </li>
-                  <li>
-                    <a href="#">訊息公告</a>
-                    <ul>
-                      <li><a href="#">系統公告</a></li>
-                      <li><a href="#">最新消息</a></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#">資源服務</a>
-                    <ul>
-                      <li><a href="#">申請表單下載</a></li>
-                      <li><a href="#">常見問答</a></li>
-                      <li><a href="#">相關網站連結</a></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#">線上預約</a>
-                    <ul>
-                      <li><a href="#">可預約資源查詢</a></li>
-                      <li><a href="#">填寫預約申請</a></li>
-                      <li><a href="#">案件與預約資料</a></li>
-                    </ul>
-                  </li>
+                  <li><a href="#">簡訊</a></li>
+                  <li><a href="#">研究季刊</a></li>
+                  <li><a href="#">技術叢書</a></li>
+                  <!--li><a href="#">研究年報</a></li-->
+                  <li><a href="#">其他出版品</a></li>
+                  <li><a href="#">專利技術</a></li>
                 </ul>
               </nav>
             </div>

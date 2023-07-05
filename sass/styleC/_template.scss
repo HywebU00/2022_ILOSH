@@ -1,13 +1,14 @@
 .menu > ul {
+  padding: 0 0 1em;
   justify-content: space-between;
   & > li {
     flex-basis: auto;
     a::after {
       display: none !important;
     }
-    &:hover > a {
-      color: #2263c5;
-    }
+    // &:hover > a {
+    //   color: #2263c5;
+    // }
   }
 }
 // 最外圍預設為100%
@@ -28,13 +29,16 @@
   background: #e1e8ef;
   z-index: 0;
   overflow: hidden;
-  &::before {
-    content: '';
-    height: 250px;
-    display: block;
-    background: url('../images/inner_bannerC.jpg') center top no-repeat;
-    background-size: cover;
+  @include screen('mobile') {
+    margin-top: 60px;
   }
+  // &::before {
+  //   content: '';
+  //   height: 80px;
+  //   display: block;
+  //   // background: url('../images/inner_bannerC.jpg') center top no-repeat;
+  //   // background-size: cover;
+  // }
   .blockC {
     position: absolute;
     max-width: 1200px;
@@ -76,9 +80,10 @@
   }
   //內頁標題
   h2.pageTitle {
+    display: none;
     position: absolute;
     left: 50px;
-    top: 50%;
+    top: 0%;
     z-index: 5;
     padding: 0 0px;
     letter-spacing: 4px;
@@ -86,6 +91,9 @@
     color: #32307c;
     font-weight: 500;
     line-height: 1;
+    @include screen('mobile') {
+      left: 20px;
+    }
     &::before {
       content: '';
       position: absolute;
@@ -110,6 +118,23 @@
     border: none;
     box-shadow: none;
     background: none;
+    padding: 20px 50px 30px;
+  }
+  .center_block {
+    position: relative;
+  }
+  .function_panel {
+    position: unset;
+    min-height: 0;
+    padding: 0;
+    .publish_time {
+      margin-bottom: 20px;
+    }
+    .share,
+    .function {
+      top: -10px;
+      position: absolute;
+    }
   }
 }
 
@@ -155,21 +180,21 @@
                 font-size: 14px;
               }
             }
-            &:nth-child(1) a {
-              &::before {
-                content: 'A -';
-              }
-            }
-            &:nth-child(2) a {
-              &::before {
-                content: 'A';
-              }
-            }
-            &:nth-child(3) a {
-              &::before {
-                content: 'A +';
-              }
-            }
+            // &:nth-child(1) a {
+            //   &::before {
+            //     content: 'A -';
+            //   }
+            // }
+            // &:nth-child(2) a {
+            //   &::before {
+            //     content: 'A';
+            //   }
+            // }
+            // &:nth-child(3) a {
+            //   &::before {
+            //     content: 'A +';
+            //   }
+            // }
           }
         }
       }
@@ -187,13 +212,13 @@
   position: relative;
   margin: 0 auto;
   // 可先設定一個中央區塊最大寬，限制accesskey對齊
-  @include screen('mobile') {
-    padding-top: 96px;
-  }
+  // @include screen('mobile') {
+  //   padding-top: 96px;
+  // }
 
-  @include screen('xs_mobile') {
-    padding-top: 60px;
-  }
+  // @include screen('xs_mobile') {
+  //   padding-top: 60px;
+  // }
   h2 {
     line-height: 1.25em;
   }
@@ -340,5 +365,38 @@ footer {
 .mobileMenuUse .header > .container {
   .sidebarCtrl {
     margin-right: 15px;
+  }
+}
+
+.function_panel .function {
+  right: 40px;
+}
+
+.innerpage {
+  .searchBlock {
+    .label {
+      color: #fff !important;
+    }
+    .departmentBox select {
+      color: #fff !important;
+      background-image: url(../images/select_arrow.svg);
+    }
+    .container {
+      background: rgb(51, 13, 105);
+      background: -moz-linear-gradient(left, rgba(51, 13, 105, 1) 0%, rgba(48, 201, 205, 1) 100%) !important;
+      background: -webkit-linear-gradient(left, rgba(51, 13, 105, 1) 0%, rgba(48, 201, 205, 1) 100%) !important;
+      background: linear-gradient(to right, rgba(51, 13, 105, 1) 0%, rgba(48, 201, 205, 1) 100%) !important;
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#330d69', endColorstr='#30c9cd',GradientType=1 ) !important;
+      @include screen('mobile') {
+        background: -moz-linear-gradient(top, rgba(51, 13, 105, 1) 0%, rgba(48, 201, 205, 1) 100%) !important;
+        background: -webkit-linear-gradient(top, rgba(51, 13, 105, 1) 0%, rgba(48, 201, 205, 1) 100%) !important;
+        background: linear-gradient(to bottom, rgba(51, 13, 105, 1) 0%, rgba(48, 201, 205, 1) 100%) !important;
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#330d69', endColorstr='#30c9cd',GradientType=1 ) !important;
+      }
+
+      .searchBtn {
+        background: #034f78 !important;
+      }
+    }
   }
 }

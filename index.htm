@@ -79,6 +79,11 @@
       <div class="btn_grp">
         <a href="https://github.com/HywebU00/2022_ILOSH" class="btn">切版檔案請按此下載</a>
       </div>
+      <p>header 的 link css 要依站台切換 styleA.css, styleB.css, styleC.css<br>
+      切換顏色在body設定class: colorStyleA / colorStyleB<br>
+      切換主選單按鈕在body設定class: mobileMenuUse / pcMenuUse<br>
+      <s>切換字型大小在body設定class: small_size / 無 / large_size (換頁時記住使用者設定並固定丟出)</s></p>
+      <p style="color:red;">*備註：請協助處理各LP, CP頁友善列印的判斷 (直接使用 window.print)</p>
       <hr />
       <div class="table_wrapper">
         <!-- hyUI 標準頁面 -->
@@ -93,27 +98,40 @@
           <tbody>
             <tr>
               <td></td>
-              <td>虛擬環境VDI預約系統-首頁</td>
+              <td>虛擬環境VDI預約系統-首頁(A)</td>
               <!-- 連結放到a裡面就好 -->
               <td><a href="mp.htm"></a></td>
             </tr>
             <tr>
               <td></td>
-              <td>採購網-首頁</td>
+              <td>採購網-首頁(B)</td>
               <!-- 連結放到a裡面就好 -->
-              <td><a href="mp2.htm"></a></td>
+              <td><a href="mp2.htm"></a>
+              <p style="color:red;">*備註：1.搜尋區單位下拉選單會變成反白顯示；2.更換標準input date；3.搜尋按鈕位置要移出一層；4.招標資訊改成Table樣式；5.頁籤預設位置要怎麼改成第一個</p>
+              </td>
             </tr>
             <tr>
               <td></td>
-              <td>成果網-首頁</td>
+              <td>成果網-首頁(C)</td>
               <!-- 連結放到a裡面就好 -->
-              <td><a href="mp3.htm"></a></td>
+              <td>
+                <p style="color:red;">*備註：1. 更新首頁最新研究報告欄位；2. 研究季刊有目錄章節的特殊條列頁</p>
+                <a href="mp3.htm" target="_blank"></a><br>
+                <a href="lptableSearchAll.htm" target="_blank"></a><br>
+                <a href="lptableC-2.htm" target="_blank"></a>
+              </td>
             </tr>
             <tr>
               <td></td>
               <td>共用-標準版型 標準條列頁</td>
               <!-- 連結放到a裡面就好 -->
-              <td><a href="lp.htm"></a></td>
+              <td>
+                <ol>
+                  <li>標準：<a href="lp.htm"></a></li>
+                  <li>A版：<a href="lpA.htm"></a>｜B版：<a href="lpB.htm"></a>｜C版：<a href="lpC.htm"></a></li>
+                </ol>
+                <p style="color:red;">*備註：統一內頁的共用資訊格式，例如：發布日期、瀏覽次數等</p>
+              </td>
             </tr>
             <tr>
               <td></td>
@@ -131,31 +149,63 @@
               <td></td>
               <td>共用-標準版型 標準內容頁</td>
               <!-- 連結放到a裡面就好 -->
-              <td><a href="cp.htm"></a></td>
+              <td>
+                <ol>
+                  <li>標準：<a href="cp.htm"></a></li>
+                  <li>A版：<a href="cpA.htm"></a>｜B版：<a href="cpB.htm"></a>｜C版：<a href="cpC.htm"></a></li>
+                </ol>
+                <p style="color:red;">*備註：CP頁從點閱到圖片窗格中間那一段會是用html編出來的</p>
+              </td>
             </tr>
             <tr>
               <td></td>
               <td>共用-特殊版型 條件查詢+Table欄位條列頁</td>
               <!-- 連結放到a裡面就好 -->
-              <td><a href="search.htm"></a></td>
+              <td>
+                <ol>
+                  <li>標準：<a href="search.htm"></a></li>
+                  <li>B版：<a href="lptableB.htm"></a>｜<a href="lptableB-2.htm"></a><br>
+                  <li>C版：各年度研究報告 <a href="lptableC.htm"></a></li>
+                    季刊 <a href="lptableC-2.htm"></a>｜<br>
+                    技術叢書/其他出版品/專利技術 <a href="lptableC-3.htm"></a></li>
+                </ol>
+              </td>
             </tr>
             <tr>
               <td></td>
               <td>共用-特殊版型 Table欄位內容頁</td>
               <!-- 連結放到a裡面就好 -->
-              <td><a href="table.htm"></a></td>
+              <td>
+                <ol>
+                  <li>標準：<a href="table.htm"></a></li>
+                  <li>B版：<a href="cptableB.htm"></a></li>
+                  <li>C版：<a href="cptableC.htm"></a></li>
+                </ol>
+              </td>
             </tr>
             <tr>
               <td></td>
               <td>共用-特殊版型 出版品條列頁</td>
               <!-- 連結放到a裡面就好 -->
-              <td><a href="publications.htm"></a></td>
+              <td>
+                <ol>
+                  <li>標準：<a href="publications.htm"></a></li>
+                  <li>C版：簡訊用 <a href="lppublicationsC.htm"></a></li>
+                </ol>
+                <p style="color:red;">*備註：預設GRID模式</p>
+              </td>
             </tr>
             <tr>
               <td></td>
               <td>共用-特殊版型 出版品(含目錄)內容頁</td>
               <!-- 連結放到a裡面就好 -->
-              <td><a href="publications_cp.htm"></a></td>
+              <td>
+                <ol>
+                  <li>標準：<a href="publications_cp.htm"></a></li>
+                  <li>C版：簡訊用 <a href="cppublicationsC.htm"></a></li>
+                </ol>
+                
+              </td>
             </tr>
             <tr>
               <td></td>
@@ -167,7 +217,12 @@
               <td></td>
               <td>共用 404頁</td>
               <!-- 連結放到a裡面就好 -->
-              <td><a href="sitemap.htm"></a></td>
+              <td>
+                <ol>
+                  <li>公版：<a href="404.htm"></a></li>
+                  <li>長官調整文案版：<a href="404/404_ilosh.htm"></a></li>
+                </ol>
+              </td>
             </tr>
           </tbody>
         </table>

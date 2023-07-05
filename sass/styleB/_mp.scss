@@ -12,7 +12,7 @@ body {
     position: relative;
   }
   .img-container {
-    @include aspect-ratio(100, 39);
+    @include aspect-ratio(4, 1);
   }
   .txtBox {
     right: 0;
@@ -282,7 +282,7 @@ body {
         .date,
         .tag {
           font-size: 0.87rem;
-          color: #999999;
+          color: #000;
           padding: 0;
           margin: 0 0 20px 0;
         }

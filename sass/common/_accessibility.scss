@@ -22,8 +22,8 @@ a:focus {
     display: none;
   }
   &:focus {
-    color: #fff !important;
-    box-shadow: 0 0px 0px 2px #ffffff inset;
+    color: $color-word;
+    box-shadow: 0 0px 0px 2px #fff inset, 0 0 0 2px #000 !important;
   }
 }
 
